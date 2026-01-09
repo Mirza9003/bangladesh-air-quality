@@ -20,11 +20,10 @@ import pandas as pd
 # ------------------------------------------------------------
 # Initialize Earth Engine
 # ------------------------------------------------------------
-try:
-    ee.Initialize(project="ee-mukarrammee")
-except Exception:
-    ee.Authenticate()
-    ee.Initialize(project="ee-mukarrammee")
+import ee
+
+ee.Initialize(project="ee-mukarrammee")
+
 
 # ------------------------------------------------------------
 # Streamlit Page Setup
